@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
 
-import './styles/skel.css';
-import './styles/style.css';
-import './styles/style-xlarge.css';
+import styles from './index.css';
+
+console.log(styles);
 
 const Header = () => (
   <header id="header">
@@ -25,8 +25,12 @@ const Header = () => (
   </header>
 );
 
+const bodyStyles = {
+  display: 'grid',
+};
+
 const TemplateWrapper = ({ children }) => (
-  <div>
+  <div className={styles.MainContainer} style={bodyStyles}>
     <Helmet title="ED PS 6430 - Fall 2017 - Team Corrigan" />
     <Header />
     <div>{children()}</div>
