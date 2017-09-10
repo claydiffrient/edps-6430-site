@@ -66,3 +66,35 @@
 :global(a) {
     box-shadow: none;
 }
+
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+   .Container {
+     display: flex;
+     flex-direction: column;
+   }
+
+   .Header {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+   }
+
+   .Nav {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     flex: 0 1 auto;
+   }
+
+   .Link {
+     flex: 0 1 auto;
+     margin-left: 1em;
+   }
+
+   .Content {
+     display: flex;
+   }
+
+
+}

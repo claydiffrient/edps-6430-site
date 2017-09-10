@@ -5,12 +5,11 @@ import styles from './project.module.css';
 
 export default function Index({ data }) {
   const { edges: posts } = data.allMarkdownRemark;
-  console.log(styles);
   return (
     <div className={styles.Container}>
       {posts
         .filter(post => post.node.frontmatter.title.length > 0)
-        .filter(post => post.node.frontmatter.path.includes('project'))
+        .filter(post => post.node.frontmatter.path.indexOf('project') > -1)
         .map(({ node: post }) => {
           return (
             <div className={styles.Entry} key={post.id}>

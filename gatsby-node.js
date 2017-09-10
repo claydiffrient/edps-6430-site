@@ -39,3 +39,14 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
     });
   });
 };
+
+exports.modifyWebpackConfig = function(config, env) {
+  if (env === 'build-javascript' || env === 'develop') {
+    const previous = config.resolve().entry;
+    config._config.entry = [];
+    config.merge({
+      entry: ['babel-polyfill'].concat(previous),
+    });
+  }
+  return config;
+};
