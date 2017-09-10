@@ -18,5 +18,11 @@ module.exports = {
         plugins: ['gatsby-remark-autolink-headers'],
       },
     },
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography.js`,
+      },
+    },
   ],
 };

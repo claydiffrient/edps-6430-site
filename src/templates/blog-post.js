@@ -1,17 +1,16 @@
 import React from 'react';
 import Helmet from 'react-helmet';
+import styles from './styles.module.css';
 
-export default function Template({
-  data, // this prop will be injected by the GraphQL query we'll write in a bit
-}) {
+export default function Template({ data }) {
   const { markdownRemark: post } = data; // data.markdownRemark holds our post data
   return (
-    <div className="blog-post-container">
-      <Helmet title={`Your Blog Name - ${post.frontmatter.title}`} />
-      <div className="blog-post">
-        <h1>{post.frontmatter.title}</h1>
+    <div className={styles.Container}>
+      <Helmet title={`Team Corrigan - ${post.frontmatter.title}`} />
+      <div className={styles.Post}>
+        <h1 className={styles.Title}>{post.frontmatter.title}</h1>
         <div
-          className="blog-post-content"
+          className={styles.Content}
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
       </div>

@@ -1,0 +1,68 @@
+:root {
+  --headerBackgroundColor: #202222;
+  --headerFontColor: #fff;
+  --darkerHeaderFontColor: color(#fff shade(20%));
+}
+
+.Container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "header"
+    "content"
+    "footer"
+}
+
+.Header {
+  grid-area: header;
+  background-color: var(--headerBackgroundColor);
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: auto;
+  padding-left: .8rem;
+  padding-right: .8rem;
+}
+
+.Logo {
+  color: var(--headerFontColor);
+  grid-column: 1;
+  grid-row: 1;
+}
+
+
+.Nav {
+  grid-column: 3;
+  grid-row: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.Link {
+  color: var(--headerFontColor);
+  align-self: center;
+  justify-self: center;
+  box-shadow: none;
+}
+
+.Link:hover {
+  color: var(--darkerHeaderFontColor);
+}
+
+.Link:focus {
+  color: var(--darkerHeaderFontColor);
+}
+
+
+
+.Content {
+  grid-area: content;
+}
+
+.Footer {
+  grid-area: footer;
+}
+
+:global(a) {
+    box-shadow: none;
+}

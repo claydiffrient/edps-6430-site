@@ -11,7 +11,9 @@
     "gatsby-plugin-typography": "^1.7.9",
     "gatsby-remark-autolink-headers": "^1.4.7",
     "gatsby-source-filesystem": "^1.4.12",
-    "gatsby-transformer-remark": "^1.7.7"
+    "gatsby-transformer-remark": "^1.7.7",
+    "typography-theme-ocean-beach": "^0.15.11",
+    "typography-theme-parnassus": "^0.15.10"
   },
   "keywords": [
     "gatsby"

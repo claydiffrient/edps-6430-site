@@ -1,0 +1,35 @@
+:root {
+  --entryFontColor: #fff;
+  --entryBackgroundColor: #202222;
+  --darkerEntryFontColor: color(#fff shade(20%));
+}
+
+.Container {
+  max-width: 940px;
+  margin: 1em auto;
+  border-radius: 2px;
+}
+
+.Entry {
+  width: 100%;
+  background-color: var(--entryBackgroundColor);
+  padding: 0.1em 1.5em;
+  margin-bottom: 1em;
+}
+
+.Title {
+  color: var(--entryFontColor);
+}
+
+.Link {
+  color: var(--entryFontColor);
+  box-shadow: none;
+}
+
+.Link:focus {
+  color: var(--darkerEntryFontColor);
+}
+
+.Link:hover {
+  color: var(--darkerEntryFontColor);
+}
